@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Briqia Capital</title>
+<meta name="description" content="Briqia Capital" />
+<link rel="icon" type="image/png" href="logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #030302;
+    --fg: #ffffff;
+    --border: rgba(255, 255, 255, 0.08);
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heavy: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px 20px 0;
+  }
+
+  .header-pill {
+    width: min(1800px, 96vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 40px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+
+  .logo-mark {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .wordmark .brand { font-weight: 500; color: #fff; }
+  .wordmark .sub { font-weight: 300; color: rgba(255, 255, 255, 0.55); margin-left: 6px; }
+
+  main {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 20px 90px;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    margin: 0 0 56px;
+    text-align: center;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: clamp(1.05rem, 2.16vw, 1.65rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  .video-frame {
+    position: relative;
+    z-index: 1;
+    width: min(980px, 88vw);
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.65);
+  }
+
+  .video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .cta-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 980px;
+    margin: 40px 0 0;
+  }
+
+  .below-title {
+    text-align: center;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: clamp(1.05rem, 2.16vw, 1.65rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+    transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+  }
+  .whatsapp-btn:hover { background: #1ebe5b; transform: scale(1.06); }
+  .whatsapp-btn svg { width: 30px; height: 30px; }
+
+  .who-section {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+    margin-top: 110px;
+  }
+
+  .who-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0 0 14px;
+  }
+
+  .who-intro {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 48px;
+  }
+
+  .who-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .who-list li {
+    display: flex;
+    gap: 20px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+  }
+  .who-list li:first-child { border-top: none; padding-top: 0; }
+  .who-list li:last-child { padding-bottom: 0; }
+
+  .who-num {
+    flex-shrink: 0;
+    width: 34px;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: rgb(255, 154, 241);
+    text-transform: none;
+  }
+
+  .who-lead {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+
+  .who-desc {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+  }
+
+  .who-closing {
+    text-align: center;
+    margin: 48px 0 0;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #fff;
+  }
+
+  .whatsapp-center {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  .site-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+    padding: 32px 20px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-inner {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-block h3 {
+    margin: 0 0 6px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .footer-block p {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .footer-copy {
+    margin: 8px 0 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 16px 14px 0; }
+    .header-pill { padding: 10px 20px; gap: 10px; }
+    .logo-mark { width: 26px; height: 26px; }
+    .wordmark { font-size: 17px; }
+    main { padding: 40px 16px 60px; }
+    .hero-title { margin-bottom: 36px; }
+    .video-frame { border-radius: 14px; }
+    .cta-row { margin-top: 28px; gap: 16px; }
+    .whatsapp-btn { width: 50px; height: 50px; }
+    .whatsapp-btn svg { width: 25px; height: 25px; }
+    .who-section { margin-top: 64px; }
+    .who-intro { margin-bottom: 32px; }
+    .who-list li { padding: 22px 0; gap: 14px; }
+    .whatsapp-center { margin-top: 44px; }
+    .site-footer { margin-top: 56px; padding: 24px 16px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-pill">
+    <img src="logo.png" alt="Briqia Capital" class="logo-mark" />
+    <div class="wordmark"><span class="brand">Briqia</span><span class="sub">Capital</span></div>
+  </div>
+</header>
+
+<main>
+  <h1 class="hero-title">Cómo captar inversores para tus proyectos inmobiliarios de forma predecible y sin depender de referidos:</h1>
+
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/9SJ9m5OGrJ0"
+      title="Briqia Capital"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="cta-row">
+    <p class="below-title">Agenda tu primera consultoría (sin costo)</p>
+    <a
+      href="https://api.whatsapp.com/send/?phone=34665048032&text=Hola,%20observ%C3%A9%20su%20video%20y%20quiero%20agendar%20una%20llamada%2E&type=phone_number&app_absent=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-btn"
+      aria-label="Agendar por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12.004 2c-5.514 0-9.997 4.478-9.997 9.997 0 1.763.462 3.484 1.34 5.001L2 22l5.132-1.346c1.462.799 3.112 1.221 4.872 1.221 5.514 0 9.997-4.478 9.997-9.997C22.001 6.478 17.518 2 12.004 2zm0 18.163c-1.583 0-3.135-.426-4.487-1.234l-.322-.191-3.045.8.813-2.968-.21-.305A8.13 8.13 0 0 1 3.837 12c0-4.507 3.66-8.166 8.167-8.166 4.507 0 8.167 3.66 8.167 8.166 0 4.507-3.66 8.163-8.167 8.163z"/>
+      </svg>
+    </a>
+  </div>
+
+  <section class="who-section">
+    <h2 class="who-title">¿Con quién trabajamos?</h2>
+    <p class="who-intro">Trabajamos con sponsors que cumplen este perfil:</p>
+    <ol class="who-list">
+      <li>
+        <span class="who-num">1</span>
+        <div>
+          <p class="who-lead">Tienes proyectos inmobiliarios propios en Estados Unidos.</p>
+          <p class="who-desc">Eres el dueño o desarrollador de los proyectos, no un intermediario. Los proyectos son tuyos y buscas inversores para financiarlo.</p>
+        </div>
+      </li>
+      <li>
+        <span class="who-num">2</span>
+        <div>
+          <p class="who-lead">Buscas levantar capital desde USD 1.000.000.</p>
+          <p class="who-desc">Nuestro sistema está diseñado para proyectos con necesidad de capital relevante. Si tu levantamiento es mayor a esta escala, encajas.</p>
+        </div>
+      </li>
+      <li>
+        <span class="who-num">3</span>
+        <div>
+          <p class="who-lead">Estás dispuesto a construir tu marca personal.</p>
+          <p class="who-desc">El sistema funciona porque tú te conviertes en el referente que los inversores buscan. Esto requiere que estés dispuesto a mostrarte y aparecer. Si no quieres ser la cara de tus proyectos, no somos para ti.</p>
+        </div>
+      </li>
+      <li>
+        <span class="who-num">4</span>
+        <div>
+          <p class="who-lead">Piensas a largo plazo.</p>
+          <p class="who-desc">No ofrecemos soluciones mágicas de un día para otro. Construimos un activo que te trae inversores por años. Buscamos personas que entiendan el valor de construir algo sólido y duradero.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="who-closing">Si cumples con esto, hablemos.</p>
+  </section>
+
+  <div class="whatsapp-center">
+    <a
+      href="https://api.whatsapp.com/send/?phone=34665048032&text=Hola,%20observ%C3%A9%20su%20video%20y%20quiero%20agendar%20una%20llamada%2E&type=phone_number&app_absent=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-btn"
+      aria-label="Agendar por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12.004 2c-5.514 0-9.997 4.478-9.997 9.997 0 1.763.462 3.484 1.34 5.001L2 22l5.132-1.346c1.462.799 3.112 1.221 4.872 1.221 5.514 0 9.997-4.478 9.997-9.997C22.001 6.478 17.518 2 12.004 2zm0 18.163c-1.583 0-3.135-.426-4.487-1.234l-.322-.191-3.045.8.813-2.968-.21-.305A8.13 8.13 0 0 1 3.837 12c0-4.507 3.66-8.166 8.167-8.166 4.507 0 8.167 3.66 8.167 8.166 0 4.507-3.66 8.163-8.167 8.163z"/>
+      </svg>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <h3>Política de Privacidad</h3>
+      <p>Recopilamos datos (nombre, teléfono, email y datos de navegación) cuando interactúas con nuestros anuncios, sitio o nos escribes. Los usamos para contactarte y brindarte nuestros servicios; no los vendemos. Usamos herramientas de Meta (Meta Pixel y API de Conversiones) y WhatsApp para medir nuestros anuncios y comunicarnos contigo.</p>
+    </div>
+    <div class="footer-block">
+      <h3>Naturaleza de nuestro servicio</h3>
+      <p>Briqia Capital no es una entidad financiera, broker ni intermediario de inversiones. No ofrecemos asesoría financiera ni de inversión, ni gestionamos capital de terceros. Brindamos servicios de construcción de marca personal para la captación de inversores.</p>
+    </div>
+    <div class="footer-block">
+      <h3>Descargo de responsabilidad</h3>
+      <p>Este sitio no forma parte del sitio web de Facebook ni de Facebook Inc., ni está avalado por Facebook de ninguna manera. Facebook es una marca registrada de Meta Platforms, Inc.</p>
+    </div>
+    <p class="footer-copy">© 2026 Briqia Capital. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
