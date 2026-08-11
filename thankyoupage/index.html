@@ -120,7 +120,7 @@
   .calendly-frame {
     position: relative;
     z-index: 1;
-    width: min(980px, 88vw);
+    width: clamp(320px, 44vw, 490px);
     margin: 40px 0 0;
     border-radius: 20px;
     overflow: hidden;
@@ -131,7 +131,7 @@
 
   .calendly-inline-widget {
     width: 100%;
-    height: 700px;
+    height: 350px;
   }
 
   .cta-row {
@@ -311,8 +311,8 @@
     main { padding: 40px 16px 60px; }
     .hero-title { margin-bottom: 36px; }
     .video-frame { border-radius: 14px; }
-    .calendly-frame { margin-top: 28px; border-radius: 14px; }
-    .calendly-inline-widget { height: 680px; }
+    .calendly-frame { margin-top: 28px; border-radius: 14px; width: 100%; }
+    .calendly-inline-widget { height: 340px; }
     .cta-row { margin-top: 28px; gap: 16px; }
     .whatsapp-btn { width: 65px; height: 65px; }
     .whatsapp-btn svg { width: 33px; height: 33px; }
