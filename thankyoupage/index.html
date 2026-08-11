@@ -132,23 +132,6 @@
     color: #fff;
   }
 
-  .calendly-frame {
-    position: relative;
-    z-index: 1;
-    width: clamp(320px, 70vw, 900px);
-    margin: 40px 0 0;
-    border-radius: 20px;
-    overflow: hidden;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.65);
-  }
-
-  .calendly-inline-widget {
-    width: 100%;
-    height: min(85vh, 950px);
-  }
-
   .calendly-btn {
     display: inline-flex;
     align-items: center;
@@ -308,8 +291,6 @@
     .hero-title { margin-bottom: 36px; }
     .video-frame { border-radius: 14px; }
     .below-title { margin-top: 28px; }
-    .calendly-frame { margin-top: 28px; border-radius: 14px; width: 100%; }
-    .calendly-inline-widget { height: min(75vh, 720px); }
     .calendly-btn { padding: 20px 32px; font-size: 1.15rem; gap: 12px; }
     .calendly-btn svg { width: 26px; height: 26px; }
     .who-section { margin-top: 64px; }
@@ -344,11 +325,20 @@
 
   <p class="below-title">Agenda tu primera consultoría</p>
 
-  <div class="calendly-frame">
-    <div
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/briqia-info/45?hide_gdpr_banner=1&background_color=030302&text_color=ffffff&primary_color=ff9af1">
-    </div>
+  <div class="calendly-cta-center">
+    <a
+      href="#"
+      class="calendly-btn"
+      aria-label="Agenda aquí"
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/briqia-info/45'});return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      <span>Agenda aquí</span>
+    </a>
   </div>
 
   <section class="who-section">
