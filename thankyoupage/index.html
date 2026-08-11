@@ -117,10 +117,24 @@
     display: block;
   }
 
+  .below-title {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    margin: 40px 0 0;
+    text-align: center;
+    font-family: var(--font-heavy);
+    font-weight: 800;
+    font-size: clamp(1.05rem, 2.16vw, 1.65rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
   .calendly-frame {
     position: relative;
     z-index: 1;
-    width: clamp(320px, 44vw, 490px);
+    width: clamp(320px, 50vw, 600px);
     margin: 40px 0 0;
     border-radius: 20px;
     overflow: hidden;
@@ -131,29 +145,7 @@
 
   .calendly-inline-widget {
     width: 100%;
-    height: 350px;
-  }
-
-  .cta-row {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    max-width: 980px;
-    margin: 40px 0 0;
-  }
-
-  .below-title {
-    text-align: center;
-    font-family: var(--font-heavy);
-    font-weight: 800;
-    font-size: clamp(1.05rem, 2.16vw, 1.65rem);
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    color: #fff;
+    height: 550px;
   }
 
   .whatsapp-btn {
@@ -311,9 +303,9 @@
     main { padding: 40px 16px 60px; }
     .hero-title { margin-bottom: 36px; }
     .video-frame { border-radius: 14px; }
+    .below-title { margin-top: 28px; }
     .calendly-frame { margin-top: 28px; border-radius: 14px; width: 100%; }
-    .calendly-inline-widget { height: 340px; }
-    .cta-row { margin-top: 28px; gap: 16px; }
+    .calendly-inline-widget { height: 480px; }
     .whatsapp-btn { width: 65px; height: 65px; }
     .whatsapp-btn svg { width: 33px; height: 33px; }
     .who-section { margin-top: 64px; }
@@ -346,26 +338,13 @@
     </iframe>
   </div>
 
+  <p class="below-title">Agenda tu primera consultoría</p>
+
   <div class="calendly-frame">
     <div
       class="calendly-inline-widget"
       data-url="https://calendly.com/briqia-info/45?hide_gdpr_banner=1&background_color=030302&text_color=ffffff&primary_color=ff9af1">
     </div>
-  </div>
-
-  <div class="cta-row">
-    <p class="below-title">Agenda tu primera consultoría (sin costo)</p>
-    <a
-      href="https://api.whatsapp.com/send/?phone=34665048032&text=Hola,%20observ%C3%A9%20su%20video%20y%20quiero%20agendar%20una%20reuni%C3%B3n%2E&type=phone_number&app_absent=0"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="whatsapp-btn"
-      aria-label="Agendar por WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        <path d="M12.004 2c-5.514 0-9.997 4.478-9.997 9.997 0 1.763.462 3.484 1.34 5.001L2 22l5.132-1.346c1.462.799 3.112 1.221 4.872 1.221 5.514 0 9.997-4.478 9.997-9.997C22.001 6.478 17.518 2 12.004 2zm0 18.163c-1.583 0-3.135-.426-4.487-1.234l-.322-.191-3.045.8.813-2.968-.21-.305A8.13 8.13 0 0 1 3.837 12c0-4.507 3.66-8.166 8.167-8.166 4.507 0 8.167 3.66 8.167 8.166 0 4.507-3.66 8.163-8.167 8.163z"/>
-      </svg>
-    </a>
   </div>
 
   <section class="who-section">
