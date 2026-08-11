@@ -117,6 +117,23 @@
     display: block;
   }
 
+  .calendly-frame {
+    position: relative;
+    z-index: 1;
+    width: min(980px, 88vw);
+    margin: 40px 0 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.65);
+  }
+
+  .calendly-inline-widget {
+    width: 100%;
+    height: 700px;
+  }
+
   .cta-row {
     position: relative;
     z-index: 1;
@@ -294,6 +311,8 @@
     main { padding: 40px 16px 60px; }
     .hero-title { margin-bottom: 36px; }
     .video-frame { border-radius: 14px; }
+    .calendly-frame { margin-top: 28px; border-radius: 14px; }
+    .calendly-inline-widget { height: 680px; }
     .cta-row { margin-top: 28px; gap: 16px; }
     .whatsapp-btn { width: 65px; height: 65px; }
     .whatsapp-btn svg { width: 33px; height: 33px; }
@@ -325,6 +344,13 @@
       allowfullscreen
       loading="lazy">
     </iframe>
+  </div>
+
+  <div class="calendly-frame">
+    <div
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/briqia-info/45?hide_gdpr_banner=1&background_color=030302&text_color=ffffff&primary_color=ff9af1">
+    </div>
   </div>
 
   <div class="cta-row">
@@ -411,5 +437,6 @@
   </div>
 </footer>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
